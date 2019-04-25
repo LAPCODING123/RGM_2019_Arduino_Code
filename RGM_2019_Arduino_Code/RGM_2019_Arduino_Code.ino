@@ -30,7 +30,7 @@ void setup() {
   pinMode(GREEN_LED, OUTPUT);
   pinMode(BOTTLE_TRIGGER, INPUT);
   keyBoardPresser.attach(SERVO_PIN);
-  keyBoardPresser.write(5);
+  keyBoardPresser.write(175);
 }
 
 void loop() {
@@ -60,9 +60,15 @@ void loop() {
       delay(3000);
       digitalWrite(GREEN_LED, LOW);
 
+      keyBoardPresser.write(155);
+      delay(300);
+      keyBoardPresser.write(175);
+
+       while(true);
+
   }
 
-  while(true);
+ 
   
 }
 
